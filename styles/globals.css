@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; --cn-accent:#39FF14; }
+html, body { @apply bg-slate-950 text-slate-100; height:100%; overflow:hidden; }
+.container { @apply max-w-7xl mx-auto px-4; }
+.section { @apply py-20; }
+.btn { @apply inline-flex items-center justify-center rounded-xl px-5 py-3 font-semibold transition bg-white text-slate-900 hover:shadow; }
+.badge { @apply inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-white/10 border border-white/10; }
+.card { @apply rounded-2xl border border-white/10 p-6 bg-white/5; }
+.card:hover { box-shadow: 0 20px 40px rgba(0,0,0,.25); transform: translateY(-1px); transition: all .25s ease; }
+h1 { @apply text-5xl md:text-7xl font-black; letter-spacing: -0.02em; }
+h2 { @apply text-3xl md:text-4xl font-bold; letter-spacing: -0.02em; }
+.subtle { @apply text-slate-400; }
+.section-screen { height: 100vh; }
+.section-content { height: 100%; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
+
+/* Interactives */
+.hotspot { position:absolute; width:12px; height:12px; border-radius:9999px; border:2px solid #fff; box-shadow:0 0 0 6px rgba(255,255,255,.15); background:radial-gradient(circle, #fff 0%, #fff 30%, transparent 31%); }
+.hotspot-label { position:absolute; transform: translate(-50%,-140%); background:rgba(0,0,0,.7); color:#fff; font-size:.75rem; padding:.25rem .5rem; border-radius:.375rem; white-space:nowrap; }
+.legend { color: rgb(203 213 225); font-size: .875rem; display:flex; gap:.75rem; flex-wrap:wrap; }
+.legend .dot { width:10px; height:10px; border-radius:9999px; display:inline-block; }
+
+/* Press polish */
+.elev { box-shadow: 0 10px 30px rgba(0,0,0,.25); }
+.card-press:hover { transform: translateY(-3px); box-shadow: 0 30px 60px rgba(0,0,0,.35); border-color: rgba(255,255,255,.2); }
+.input { @apply bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm text-slate-100 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[--cn-accent]; }
+.select { @apply bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm text-slate-100 focus:outline-none focus:ring-2 focus:ring-[--cn-accent]; }
+.chips { @apply flex flex-wrap gap-2; }
+.chip { @apply px-3 py-1 rounded-full text-xs border border-white/10 bg-white/5 hover:bg-white/10 cursor-pointer transition; }
+.chip[data-active="true"] { @apply bg-[--cn-accent] text-slate-900 border-transparent; }
+.pager { @apply flex items-center gap-2 text-sm; }
+.pager button { @apply px-3 py-1 rounded-md border border-white/10 bg-white/5 hover:bg-white/10; }
+.pager .active { @apply bg-[--cn-accent] text-slate-900 border-transparent; }
+
+/* Parallax backdrop */
+.parallax { background: radial-gradient(1200px 500px at 70% -50%, rgba(57,255,20,.12), transparent), radial-gradient(1000px 400px at 10% -30%, rgba(80,150,120,.08), transparent); }
