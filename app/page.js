@@ -1,4 +1,3 @@
-import dynamic from "next/dynamic";
 import React from "react";
 import SectionPager from "../components/SectionPager";
 import TopNav from "../components/TopNav";
@@ -11,8 +10,8 @@ import Press from "../components/Press";
 import Starfield from "../components/Starfield";
 import ShareBar from "../components/ShareBar";
 import Descripcion from "../components/Descripcion";
+import ThreeSceneWrapper from "../components/ThreeSceneWrapper";
 import pressItems from "../data/press.json";
-const ThreeScene = dynamic(() => import("../components/ThreeScene"), { ssr: false });
 
 export default function Page() {
   const t = { motto: 'El futuro es nuclear', sub: 'Energía limpia, estable y escalable', cta: 'Descubrí el plan' };
@@ -73,7 +72,7 @@ export default function Page() {
         <div className="container pt-16">
           <h2>ACR-300 (3D cutaway)</h2>
           <p className="text-slate-300 mt-3">El ACR-300 propone un enfoque modular para acelerar despliegue, reducir costos y elevar la confiabilidad. El corte 3D permite explorar los sistemas principales (núcleo, generadores de vapor horizontales, contención) con hotspots.</p>
-          <div className="rounded-2xl border border-white/10 overflow-hidden aspect-video mt-6"><ThreeScene /></div>
+          <div className="rounded-2xl border border-white/10 overflow-hidden aspect-video mt-6"><ThreeSceneWrapper /></div>
           <p className="text-slate-400 text-sm mt-2">En mobile mostramos una vista simplificada para rendimiento.</p>
         </div>
       </section>
